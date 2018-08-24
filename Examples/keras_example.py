@@ -7,6 +7,7 @@ def create_sample_model():
     # Generate dummy data
     data = np.random.random((1000, 10))
     labels = np.random.randint(2, size=(1000, 1))
+    names = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 
     # For a single-input model with 2 classes (binary classification):
     model = Sequential()
@@ -18,4 +19,4 @@ def create_sample_model():
 
     # Train the model, iterating on the data in batches of 32 samples
     model.fit(data, labels, epochs=10, batch_size=32, verbose=0)
-    return (data, labels, model)
+    return (data, labels, model, names)
