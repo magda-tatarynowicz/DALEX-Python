@@ -1,9 +1,9 @@
+from keras.models import Sequential
+from keras.layers import Dense
+import numpy as np
+
 # https://keras.io/getting-started/sequential-model-guide
 def create_sample_model():
-    from keras.models import Sequential
-    from keras.layers import Dense
-    import numpy as np
-
     # Generate dummy data
     data = np.random.random((1000, 10))
     labels = np.random.randint(2, size=(1000, 1))
