@@ -26,3 +26,6 @@ class py_dalex:
 
     def variable_importance(self, explainer):
         return self.dalex.variable_importance(explainer)
+
+    def variable_response(self, explainer, variable):
+        return self.dalex.variable_response(explainer, variable)
