@@ -1,10 +1,19 @@
 # Keras sample model generation
-from keras_example import create_sample_model
-(data, labels, model, names) = create_sample_model()
+#from keras_example import create_sample_model
+#(data, labels, model, names) = create_sample_model()
+
+# Random forest sample model generation
+#from random_forest_example import create_random_forest_model
+#(data, labels, model, names) = create_random_forest_model()
+
+# Linear regression sample model generation
+from linear_regression_example import create_sample_linear_regression
+(data, labels, model, names) = create_sample_linear_regression()
 
 # Dalex operations
 from py_dalex import py_dalex
 dalex = py_dalex()
+print(data)
 explainer = dalex.explain(model, data, labels, names)
 model_performance = dalex.model_performance(explainer)
 variable_importance = dalex.variable_importance(explainer)
