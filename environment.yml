@@ -1,5 +1,5 @@
 dependencies:
-	- numpy
-	- rpy2
-	- keras
-	- sklearn
+  - numpy
+  - rpy2
+  - keras
+  - sklearn
