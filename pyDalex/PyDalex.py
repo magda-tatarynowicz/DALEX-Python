@@ -2,12 +2,12 @@ import rpy2.robjects as robjects
 import rpy2.rinterface as rinterface
 import rpy2.robjects.numpy2ri as numpy2ri
 from rpy2.robjects.packages import importr
-from predict_function_generator import predict_function_generator
+from .PredictFunctionGenerator import PredictFunctionGenerator
 
-class py_dalex:  
+class PyDalex:  
     def __init__(self):
         self.dalex = importr('DALEX')
-        self.predict_function_generator = predict_function_generator()
+        self.predict_function_generator = PredictFunctionGenerator()
         # For conversion between R and NumPy objects
         numpy2ri.activate()
 
