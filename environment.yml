@@ -2,4 +2,4 @@ dependencies:
   - numpy
   - rpy2
   - keras
-  - sklearn
+  - scikit-learn
